@@ -19,6 +19,7 @@ public class AirHockey extends Canvas implements KeyListener, Runnable{
 	private UpperRightWall urWall;
 	private LowerRightWall lrWall;
 	private LeftGoal lGoal;
+	private RightGoal rGoal;
 	
 	private int rightScore;
 	private int leftScore;
@@ -35,6 +36,7 @@ public class AirHockey extends Canvas implements KeyListener, Runnable{
 		urWall = new UpperRightWall();
 		lrWall = new LowerRightWall();
 		lGoal = new LeftGoal();
+		rGoal = new RightGoal();
 
 
 
@@ -111,6 +113,7 @@ public class AirHockey extends Canvas implements KeyListener, Runnable{
 				ball.setYSpeed(-ball.getYSpeed());
 			}
 		}
+		
 		//see if the ball hits the top or bottom wall 
 		if(!(ball.getY()>=10 && ball.getY()<=480))
 		{
